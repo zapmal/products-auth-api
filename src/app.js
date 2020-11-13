@@ -12,17 +12,17 @@ app.set("pkg", pkg);
 app.use(morgan("dev"));
 
 app.get("/", (request, response) => {
-    response.json({
-        name: app.get("pkg").name,
-        author: app.get("pkg").author,
-        description: app.get("pkg").description,
-        version: app.get("pkg").version
-    });
+  response.json({
+    name: app.get("pkg").name,
+    author: app.get("pkg").author,
+    description: app.get("pkg").description,
+    version: app.get("pkg").version
+  });
 });
 
 app.use("/products", productsRoutes);
 
 export {
-    app,
-    PORT
+  app,
+  PORT
 };

@@ -1,5 +1,5 @@
 import {
-    Router
+  Router
 } from "express";
 import * as productsController from "../controllers/productsController";
 
