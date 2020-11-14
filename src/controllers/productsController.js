@@ -1,9 +1,43 @@
-const createProduct = (request, response) => {
+import Product from "../models/Product";
 
+const createProduct = async (request, response) => {
+  const {
+    name,
+    category,
+    price,
+    image
+  } = request.body;
+
+  try {
+    const newProduct = new Product({
+      name,
+      category,
+      price,
+      image
+    });
+
+    await newProduct.save();
+
+    response
+      .status(201)
+      .json(newProduct);
+  } catch (error) {
+    response
+      .status(400)
+      .json(error);
+  }
 };
 
-const getProducts = (request, response) => {
-  response.json("get products jahahas");
+const getProducts = async (request, response) => {
+  try {
+    const products = await Product.find();
+
+    response.json(products);
+  } catch (error) {
+    response
+      .status(404)
+      .json(error);
+  }
 };
 
 const getProduct = (request, response) => {

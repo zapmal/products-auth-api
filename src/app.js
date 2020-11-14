@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3000;
 app.set("pkg", pkg);
 
 app.use(morgan("dev"));
+app.use(express.json());
 
 app.get("/", (request, response) => {
   response.json({
@@ -20,7 +21,7 @@ app.get("/", (request, response) => {
   });
 });
 
-app.use("/products", productsRoutes);
+app.use("/api/products", productsRoutes);
 
 export {
   app,
