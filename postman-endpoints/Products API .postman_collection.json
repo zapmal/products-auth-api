@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "75c18ecd-d8b4-4056-bfb9-35df66d9ffd9",
+		"name": "Products API ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "/products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Gets all the saved products."
+					},
+					"response": []
+				},
+				{
+					"name": "/products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"laptop hp\",\r\n    \"price\": 999.99,\r\n    \"category\": \"laptops\",\r\n    \"image\": \"https://http2.mlstatic.com/laptop-hp-pavilion-14-ce0001la-14-core-i5-8-gb-1-tb-win-10-D_NQ_NP_810445-MLV31370706789_072019-F.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Creates a new product."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "users",
+			"item": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "auth",
+			"item": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
