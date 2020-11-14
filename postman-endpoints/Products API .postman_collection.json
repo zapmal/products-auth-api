@@ -62,6 +62,85 @@
 						"description": "Creates a new product."
 					},
 					"response": []
+				},
+				{
+					"name": "/products/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/products/5faff0627ac1f0108c2c5a92",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"5faff0627ac1f0108c2c5a92"
+							]
+						},
+						"description": "Retrieves the specified (id) product."
+					},
+					"response": []
+				},
+				{
+					"name": "/products/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"laptop aaaaaaaa\",\r\n    \"category\": \"something\",\r\n    \"price\": \"11000\",\r\n    \"image\": \"COOL LINK\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/5faff0627ac1f0108c2c5a92",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"5faff0627ac1f0108c2c5a92"
+							]
+						},
+						"description": "Update the specified (id) product."
+					},
+					"response": []
+				},
+				{
+					"name": "/products/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/products/5faff0627ac1f0108c2c5a92",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"5faff0627ac1f0108c2c5a92"
+							]
+						},
+						"description": "Delete the specified (id) product."
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
