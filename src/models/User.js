@@ -16,7 +16,10 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  roles: []
+  roles: [{
+    ref: "Role",
+    type: Schema.Types.ObjectId
+  }]
 });
 
 const User = model("User", userSchema);
