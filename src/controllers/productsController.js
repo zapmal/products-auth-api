@@ -63,7 +63,6 @@ const updateProduct = async (request, response) => {
     });
 
     response
-      // .status(204)
       .status(200)
       .json(updatedProduct);
   } catch (error) {

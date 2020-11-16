@@ -9,7 +9,7 @@
 			"name": "products",
 			"item": [
 				{
-					"name": "/products",
+					"name": "/api/products",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -29,7 +29,7 @@
 					"response": []
 				},
 				{
-					"name": "/products",
+					"name": "/api/products",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -37,11 +37,16 @@
 								"key": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"laptop hp\",\r\n    \"price\": 999.99,\r\n    \"category\": \"laptops\",\r\n    \"image\": \"https://http2.mlstatic.com/laptop-hp-pavilion-14-ce0001la-14-core-i5-8-gb-1-tb-win-10-D_NQ_NP_810445-MLV31370706789_072019-F.jpg\"\r\n}",
+							"raw": "{\r\n    \"name\": \"ANODA ONE 3\",\r\n    \"price\": \"00.00\",\r\n    \"category\": \"example\",\r\n    \"image\": \"url\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -64,7 +69,7 @@
 					"response": []
 				},
 				{
-					"name": "/products/:id",
+					"name": "/api/products/:id",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -91,7 +96,7 @@
 					"response": []
 				},
 				{
-					"name": "/products/:id",
+					"name": "/api/products/:id",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -99,14 +104,22 @@
 								"key": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYjE4NDUwMDdhMGQzMzAyNDA1ZTdiMiIsImlhdCI6MTYwNTQ3MDgxNiwiZXhwIjoxNjA1NTU1NDE2fQ.Yq_lv0IFhezXDNSqaVQvPttvp0swd-FCA6JcHG5QuV4",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"laptop aaaaaaaa\",\r\n    \"category\": \"something\",\r\n    \"price\": \"11000\",\r\n    \"image\": \"COOL LINK\"\r\n}"
+							"raw": "{\r\n    \"name\": \"laptop OLDI MF OLDDDDDDDDDDDDDDDDDDDDDDDDD\",\r\n    \"category\": \"something\",\r\n    \"price\": \"11000\",\r\n    \"image\": \"WOOHOOOOOOOOOOOOOOOOOOOOOOOOO\"\r\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/products/5faff0627ac1f0108c2c5a92",
+							"raw": "localhost:3000/api/products/5faef8a14ac81d09ac46358d",
 							"host": [
 								"localhost"
 							],
@@ -114,7 +127,7 @@
 							"path": [
 								"api",
 								"products",
-								"5faff0627ac1f0108c2c5a92"
+								"5faef8a14ac81d09ac46358d"
 							]
 						},
 						"description": "Update the specified (id) product."
@@ -122,12 +135,18 @@
 					"response": []
 				},
 				{
-					"name": "/products/:id",
+					"name": "/api/products/:id",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYjE4ODEzNDNmODRmMzBkNDgyNmQ5NSIsImlhdCI6MTYwNTQ3MDIzOCwiZXhwIjoxNjA1NTU0ODM4fQ.ts4Fi54lTCsorGvJuyXH3G24LBGtnJ9B28_u07JHqxw",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "localhost:3000/api/products/5faff0627ac1f0108c2c5a92",
+							"raw": "localhost:3000/api/products/5fafed8b7ac1f0108c2c5a91",
 							"host": [
 								"localhost"
 							],
@@ -135,7 +154,7 @@
 							"path": [
 								"api",
 								"products",
-								"5faff0627ac1f0108c2c5a92"
+								"5fafed8b7ac1f0108c2c5a91"
 							]
 						},
 						"description": "Delete the specified (id) product."
@@ -147,12 +166,120 @@
 		},
 		{
 			"name": "users",
-			"item": [],
+			"item": [
+				{
+					"name": "/api/users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYjE5ZmIzZjA5YzI1MTZkNDU1Y2NhMSIsImlhdCI6MTYwNTQ3NjMwOCwiZXhwIjoxNjA1NTYwOTA4fQ.VKzeg3vijKqxcsdVADbOYrxnz42QChPrbRk40EvHkXM",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"shit\",\r\n    \"email\": \"moreshit@mail.com\",\r\n    \"roles\": [\"admin\"]\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Creates a new user\r\n"
+					},
+					"response": []
+				}
+			],
 			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "auth",
-			"item": [],
+			"item": [
+				{
+					"name": "/api/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"sudo@admin.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/auth/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"sudo\",\r\n    \"email\": \"sudo@admin.com\",\r\n    \"password\": \"password\",\r\n    \"roles\": [\"admin\"]\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/signup?",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"protocolProfileBehavior": {}
 		}
 	],
